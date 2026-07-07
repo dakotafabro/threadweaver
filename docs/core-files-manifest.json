@@ -1,0 +1,9 @@
+{
+  "core_files": [
+    "sdk/src/policy.ts",
+    "sdk/src/chatgptExport.ts",
+    "sdk/src/intent.ts",
+    "mcp/src/server.ts",
+    "cli/src/index.ts"
+  ]
+}
