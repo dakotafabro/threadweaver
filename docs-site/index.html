@@ -3,36 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ThreadWeaver — AAIF Submission</title>
+  <title>ThreadWeaver | AAIF Portfolio</title>
   <style>
-    :root { --bg:#0a0a0a; --panel:rgba(18,18,18,.88); --line:#262626; --text:#f5f5f5; --muted:#b3b3b3; --accent:#67e8f9; --radius:16px; }
+    :root {
+      --bg: #0a0a0a;
+      --panel: #121212;
+      --line: #27272a;
+      --text: #f5f5f5;
+      --muted: #b4b4b8;
+      --accent: #67e8f9;
+      --radius: 16px;
+    }
     * { box-sizing: border-box; }
-    body { margin:0; color:var(--text); background:radial-gradient(1200px 700px at 10% -20%, rgba(103,232,249,.10), transparent 55%), var(--bg); font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height:1.6; }
-    .wrap { max-width:1080px; margin:0 auto; padding:56px 22px 88px; }
-    .header { margin-bottom:20px; }
-    .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
-    h1 { margin:6px 0 8px; font-size:clamp(1.9rem,4vw,2.7rem); letter-spacing:-.02em; }
-    h2 { margin:0 0 10px; font-size:1.15rem; letter-spacing:-.01em; }
-    p, li { color:var(--muted); }
-    .card { border:1px solid var(--line); border-radius:var(--radius); background:var(--panel); padding:18px; margin-top:14px; }
-    a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
-    pre { margin:0; background:#0f0f0f; border:1px solid #2b2b2b; border-radius:12px; padding:14px; overflow-x:auto; }
-    .grid { display:grid; gap:14px; grid-template-columns:1fr; }
-    @media (min-width:900px) { .grid.two { grid-template-columns:1fr 1fr; } }
-    footer { margin-top:28px; border-top:1px solid var(--line); padding-top:14px; color:#8f8f8f; font-size:.92rem; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .shell { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(6px);
+      background: rgba(10,10,10,0.84);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      max-width: 1040px; margin: 0 auto; padding: 14px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { font-weight: 600; letter-spacing: -0.01em; }
+    .brand span { color: var(--accent); }
+    .subtle { color: var(--muted); font-size: 0.92rem; }
+
+    main { padding: 36px 0 72px; }
+    .hero, .card { border: 1px solid var(--line); background: var(--panel); border-radius: var(--radius); }
+    .hero { padding: 24px; }
+    .card { padding: 18px; margin-top: 14px; }
+
+    h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 4vw, 2.5rem); letter-spacing: -0.02em; }
+    h2 { margin: 0 0 10px; font-size: 1.15rem; letter-spacing: -0.01em; }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .grid { display: grid; gap: 14px; }
+    @media (min-width: 900px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+
+    pre { margin: 0; background: #0f0f10; border: 1px solid #2f2f33; border-radius: 10px; padding: 12px; overflow: auto; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #e5e7eb; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: rgba(10,10,10,0.88);
+      margin-top: 40px;
+    }
+    .footer-inner { max-width: 1040px; margin: 0 auto; padding: 14px 20px; color: var(--muted); font-size: 0.9rem; }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <header class="header">
-      <p class="eyebrow">AAIF Portfolio</p>
+  <header>
+    <div class="header-inner">
+      <div class="brand">AAIF <span>Portfolio</span></div>
+      <div class="subtle">Submission • July 2026</div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
       <h1>ThreadWeaver</h1>
-      <p>Consent-first conversational memory for Goose sessions, designed for strategic continuity and trust-preserving retrieval.</p>
-    </header>
+      <p>Consent-first conversational memory for Goose sessions, with policy-scoped retrieval and strategic synthesis.</p>
+    </section>
 
     <section class="card">
       <h2>Problem</h2>
-      <p>"I do a lot of thinking in my ChatGPT app and I was tired of copying and pasting my chats and/or asking ChatGPT to extract the chat into an .md file. With that, ThreadWeaver was born. I can upload a backlog of my chat history via ChatGPT export (settings in your ChatGPT profile) and also pull in the latest chats as well. This lets me reference prior thinking from my chat history and integrate it with what I'm building with Goose."</p>
+      <p>
+        I do a lot of thinking in my ChatGPT app and I was tired of copying and pasting my chats and/or asking ChatGPT to extract the chat into an .md file. With that, ThreadWeaver was born. I can upload a backlog of my chat history via ChatGPT export (settings in your ChatGPT profile) and also pull in the latest chats as well. This lets me reference prior thinking from my chat history and integrate it with what I'm building with Goose.
+      </p>
     </section>
 
     <section class="grid two">
@@ -44,21 +92,21 @@ npm install
 npm run -w @threadweaver/cli dev -- init</code></pre>
       </article>
       <article class="card">
-        <h2>Use in a Goose Session</h2>
+        <h2>Use in a Goose session</h2>
+        <p>ThreadWeaver is intended to work with Goose first, while maturing in portability.</p>
         <pre><code>I remember thinking in ChatGPT about X.
-Surface that and connect it to our build on Y.</code></pre>
-        <p>ThreadWeaver resolves intent, applies policy scope, retrieves relevant prior thinking, and returns strategic synthesis.</p>
+Surface it and show overlap with what we are building for project Y.</code></pre>
       </article>
     </section>
 
     <section class="card">
-      <h2>ChatGPT Export Setup</h2>
+      <h2>ChatGPT Export Setup (Step-by-Step)</h2>
       <ol>
         <li>Request your ChatGPT export data. This may take several hours or days depending on export size.</li>
-        <li>When you receive the email that your export is ready, ensure you are logged into the ChatGPT account associated with that export.</li>
+        <li>When you receive the email that your export is ready, ensure you are logged in to the ChatGPT account associated with that export.</li>
         <li>Download the export archive from the email link.</li>
         <li>Unzip the export archive locally.</li>
-        <li>Provide the path to the unzipped export directory to Goose to configure ThreadWeaver.</li>
+        <li>Provide the path to the unzipped export directory to Goose to configure with ThreadWeaver.</li>
       </ol>
       <pre><code>threadweaver connect chatgpt-export --file /path/to/unzipped-export-directory
 threadweaver projects sync-from-import
@@ -67,22 +115,37 @@ threadweaver projects allow --project chatgpt-general --access summary</code></p
 
     <section class="grid two">
       <article class="card">
-        <h2>Design Decisions</h2>
+        <h2>Design decisions</h2>
         <ul>
-          <li>Local-first for trust, privacy, and velocity.</li>
-          <li>Consent-first with deny-by-default project scope controls.</li>
-          <li>Deterministic policy enforcement and auditability.</li>
+          <li><strong>Local-first:</strong> lower privacy risk and fast iteration.</li>
+          <li><strong>Consent-first:</strong> deny-by-default and project-scoped access.</li>
+          <li><strong>Deterministic enforcement:</strong> policy checks remain strict even with flexible intent parsing.</li>
+          <li><strong>Auditability:</strong> retrieval decisions are logged.</li>
         </ul>
       </article>
       <article class="card">
-        <h2>Alignment</h2>
-        <p><a href="https://aaif.io/blog/goose-doubles-down-on-open-in-latest-two-releases/" target="_blank" rel="noreferrer">Goose doubles down on open in latest two releases</a></p>
-        <p>ThreadWeaver aligns through SDK/MCP boundaries, policy-governed retrieval, and an open integration posture.</p>
-        <p><a href="https://github.com/dakotafabro/threadweaver/tree/main/docs" target="_blank" rel="noreferrer">ThreadWeaver docs on GitHub</a></p>
+        <h2>Goose ecosystem alignment</h2>
+        <p>
+          ThreadWeaver aligns with updates described by Angie Jones:
+          <a href="https://aaif.io/blog/goose-doubles-down-on-open-in-latest-two-releases/" target="_blank" rel="noreferrer">Goose doubles down on open in latest two releases</a>.
+        </p>
+        <ul>
+          <li>Runtime/interface separation</li>
+          <li>Policy-governed retrieval and tool contracts</li>
+          <li>Portable integration approach for broader agent ecosystems</li>
+        </ul>
       </article>
     </section>
 
-    <footer>AAIF ecosystem submissions • Updated July 2026</footer>
+    <section class="card">
+      <h2>References</h2>
+      <p><a href="https://github.com/dakotafabro/threadweaver/tree/main/docs" target="_blank" rel="noreferrer">ThreadWeaver docs on GitHub</a></p>
+      <p><a href="https://www.npmjs.com/package/@threadweaver/cli" target="_blank" rel="noreferrer">@threadweaver/cli on npm</a> · <a href="https://www.npmjs.com/package/@threadweaver/sdk" target="_blank" rel="noreferrer">@threadweaver/sdk on npm</a></p>
+    </section>
   </main>
+
+  <footer>
+    <div class="footer-inner">AAIF ecosystem submissions • Updated July 2026</div>
+  </footer>
 </body>
 </html>
