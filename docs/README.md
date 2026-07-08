@@ -20,3 +20,31 @@ See docs/active-project-threadweaver.md for active scope, milestones, and releas
     goose plugin install file:///absolute/path/to/threadweaver
 
     goose plugin update threadweaver
+
+## Quickstart
+
+1) Clone and install:
+
+    git clone https://github.com/dakotafabro/threadweaver.git
+    cd threadweaver
+    npm install
+
+2) Initialize local state:
+
+    npm run -w @threadweaver/threadweaver-cli dev -- init
+
+3) Install Goose plugin from local source:
+
+    goose plugin install file:///absolute/path/to/threadweaver
+
+4) Export ChatGPT data, unzip locally, then ingest:
+
+    threadweaver connect chatgpt-export --file /absolute/path/to/unzipped-export-or-conversations.json
+    threadweaver projects sync-from-import
+    threadweaver projects allow --project chatgpt-general --access summary
+
+5) Validate retrieval:
+
+    threadweaver projects list
+    threadweaver recent --project chatgpt-general --limit 10
+    threadweaver recall "query text" --project chatgpt-general --limit 5
