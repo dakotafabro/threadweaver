@@ -14,3 +14,9 @@ See docs/active-project-threadweaver.md for active scope, milestones, and releas
 
 - docs/specs/chatgpt-export-bundle-v0.2.md
 - docs/export-import-workflow.md
+
+## Goose plugin install
+
+    goose plugin install file:///Users/dakotafabro/dakotafabrodev/threadweaver
+
+    goose plugin update threadweaver

@@ -58,3 +58,13 @@ See docs/core-vs-personalization-boundary.md before modifying trust and contract
 Run a core drift preflight before recall workflows:
 
 - threadweaver doctor
+
+## Goose plugin install
+
+Install ThreadWeaver into Goose from repository source:
+
+    goose plugin install file:///Users/dakotafabro/dakotafabrodev/threadweaver
+
+If already installed, update in place:
+
+    goose plugin update threadweaver
