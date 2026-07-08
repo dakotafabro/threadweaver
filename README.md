@@ -36,13 +36,33 @@ In progress:
 
 ## Quickstart
 
-Run:
+First-time setup:
 
-npm install
-npm run -w @threadweaver/threadweaver-cli dev -- init
-threadweaver connect chatgpt-export --file /absolute/path/to/export-or-conversations.json
-threadweaver projects sync-from-import
-threadweaver projects allow --project chatgpt-general --access summary
+1. Clone and install dependencies
+
+    git clone https://github.com/dakotafabro/threadweaver.git
+    cd threadweaver
+    npm install
+
+2. Initialize local ThreadWeaver state
+
+    npm run -w ./cli dev -- init
+
+3. Install ThreadWeaver in Goose from local source
+
+    goose plugin install file:///absolute/path/to/threadweaver
+
+4. Import ChatGPT export data
+
+    threadweaver connect chatgpt-export --file /absolute/path/to/export-or-conversations.json
+    threadweaver projects sync-from-import
+    threadweaver projects allow --project chatgpt-general --access summary
+
+5. Validate retrieval
+
+    threadweaver projects list
+    threadweaver recent --project chatgpt-general --limit 10
+    threadweaver recall "query text" --project chatgpt-general --limit 5
 
 ## Active project docs
 
