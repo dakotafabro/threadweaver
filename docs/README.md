@@ -17,6 +17,6 @@ See docs/active-project-threadweaver.md for active scope, milestones, and releas
 
 ## Goose plugin install
 
-    goose plugin install file:///Users/dakotafabro/dakotafabrodev/threadweaver
+    goose plugin install file:///absolute/path/to/threadweaver
 
     goose plugin update threadweaver

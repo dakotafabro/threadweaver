@@ -63,7 +63,9 @@ Run a core drift preflight before recall workflows:
 
 Install ThreadWeaver into Goose from repository source:
 
-    goose plugin install file:///Users/dakotafabro/dakotafabrodev/threadweaver
+Clone locally first, then install from that local path:
+
+    goose plugin install file:///absolute/path/to/threadweaver
 
 If already installed, update in place:
 
