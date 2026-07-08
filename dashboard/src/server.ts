@@ -1,5 +1,5 @@
 import express from "express";
-import { readPolicy, type AccessLevel, type Policy, writePolicy } from "@threadweaver/sdk";
+import { readPolicy, type AccessLevel, type Policy, writePolicy } from "@dakotafabrodev/threadweaver-sdk";
 
 const levels: AccessLevel[] = ["metadata", "summary", "markdown", "ask", "deny"];
 

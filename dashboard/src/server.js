@@ -1,5 +1,5 @@
 import express from "express";
-import { readPolicy, writePolicy } from "@threadweaver/sdk";
+import { readPolicy, writePolicy } from "@dakotafabrodev/threadweaver-sdk";
 const levels = ["metadata", "summary", "markdown", "ask", "deny"];
 function label(level) {
     if (level === "metadata")

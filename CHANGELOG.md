@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.2 - 2026-07-07
+
+### Packaging and publish path
+- Migrated package scope to @dakotafabrodev for first public npm publishing.
+- Aligned workspace package names and inter-package dependencies for scoped release.
+- Added release checklist for 0.1.2 publish order and verification.
+
+
 ## 0.1.1 - 2026-07-07
 
 ### Reframing and release messaging

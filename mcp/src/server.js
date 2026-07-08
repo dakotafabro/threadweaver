@@ -1,5 +1,5 @@
 import express from "express";
-import { appendAudit, correlateWithBuild, inferRecallIntent, listAllowedProjects, listRecentFromThreads, readPolicy, recallFromThreads } from "@threadweaver/sdk";
+import { appendAudit, correlateWithBuild, inferRecallIntent, listAllowedProjects, listRecentFromThreads, readPolicy, recallFromThreads } from "@dakotafabrodev/threadweaver-sdk";
 const toolSpecs = [
     {
         name: "list_allowed_projects",

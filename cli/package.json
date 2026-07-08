@@ -1,8 +1,14 @@
 {
-  "name": "@threadweaver/cli",
-  "version": "0.1.1",
+  "name": "@dakotafabrodev/threadweaver-cli",
+  "version": "0.1.2",
   "description": "ThreadWeaver CLI for ChatGPT export ingestion, policy-scoped recall, and local-first memory workflows",
-  "keywords": ["threadweaver", "chatgpt-export", "goose", "memory", "mcp"],
+  "keywords": [
+    "threadweaver",
+    "chatgpt-export",
+    "goose",
+    "memory",
+    "mcp"
+  ],
   "type": "module",
   "bin": {
     "threadweaver": "dist/index.js"
@@ -13,9 +19,9 @@
     "dev": "tsx src/index.ts"
   },
   "dependencies": {
-    "@threadweaver/dashboard": "file:../dashboard",
-    "@threadweaver/mcp": "file:../mcp",
-    "@threadweaver/sdk": "file:../sdk",
+    "@dakotafabrodev/threadweaver-dashboard": "^0.1.2",
+    "@dakotafabrodev/threadweaver-mcp": "^0.1.2",
+    "@dakotafabrodev/threadweaver-sdk": "^0.1.2",
     "commander": "^12.1.0"
   },
   "devDependencies": {

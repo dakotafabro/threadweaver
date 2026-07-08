@@ -3,8 +3,8 @@ import { exec } from "node:child_process";
 import { readFile } from "node:fs/promises";
 import { promisify } from "node:util";
 import { Command } from "commander";
-import { startDashboardServer } from "@threadweaver/dashboard";
-import { startMcpServer } from "@threadweaver/mcp";
+import { startDashboardServer } from "@dakotafabrodev/threadweaver-dashboard";
+import { startMcpServer } from "@dakotafabrodev/threadweaver-mcp";
 import {
   appendAudit,
   importChatGptExport,
@@ -15,7 +15,7 @@ import {
   recallFromThreads,
   setProjectAccess,
   upsertProjects
-} from "@threadweaver/sdk";
+} from "@dakotafabrodev/threadweaver-sdk";
 
 const execAsync = promisify(exec);
 

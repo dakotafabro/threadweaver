@@ -1,6 +1,6 @@
 {
-  "name": "@threadweaver/dashboard",
-  "version": "0.1.0",
+  "name": "@dakotafabrodev/threadweaver-dashboard",
+  "version": "0.1.2",
   "type": "module",
   "exports": "./src/server.ts",
   "scripts": {
@@ -17,5 +17,6 @@
     "@types/node": "^22.10.2",
     "tsx": "^4.19.1",
     "typescript": "^5.6.3"
-  }
+  },
+  "description": "ThreadWeaver dashboard package"
 }

@@ -3,8 +3,8 @@
 Recommended delivery path:
 
 1. Keep source-of-truth in GitHub monorepo.
-2. Publish @threadweaver/cli to npm for installation ergonomics.
-3. Publish @threadweaver/sdk to npm for ecosystem integration.
+2. Publish @threadweaver/threadweaver-cli to npm for installation ergonomics.
+3. Publish @threadweaver/threadweaver-sdk to npm for ecosystem integration.
 4. Keep local-first runtime default with hosted docs on Vercel.
 
 Suggested release path:

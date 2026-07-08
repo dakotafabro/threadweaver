@@ -12,10 +12,10 @@
 - npm package metadata updates.
 
 ## Publish plan
-1. Publish @threadweaver/sdk
-2. Publish @threadweaver/dashboard
-3. Publish @threadweaver/mcp
-4. Publish @threadweaver/cli
+1. Publish @threadweaver/threadweaver-sdk
+2. Publish @threadweaver/threadweaver-dashboard
+3. Publish @threadweaver/threadweaver-mcp
+4. Publish @threadweaver/threadweaver-cli
 
 ## Post-publish verification
 - npm package pages reflect updated descriptions.

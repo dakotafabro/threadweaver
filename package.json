@@ -1,7 +1,7 @@
 {
   "name": "threadweaver",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "workspaces": [
     "cli",
     "dashboard",
@@ -9,10 +9,10 @@
     "sdk"
   ],
   "scripts": {
-    "build": "npm run -w @threadweaver/sdk build && npm run -w @threadweaver/dashboard build && npm run -w @threadweaver/mcp build && npm run -w @threadweaver/cli build",
-    "typecheck": "npm run -w @threadweaver/sdk typecheck && npm run -w @threadweaver/dashboard typecheck && npm run -w @threadweaver/mcp typecheck && npm run -w @threadweaver/cli typecheck",
-    "dev": "npm run -w @threadweaver/cli dev",
-    "test": "npm run -w @threadweaver/sdk test"
+    "build": "npm run -w ./sdk build && npm run -w ./dashboard build && npm run -w ./mcp build && npm run -w ./cli build",
+    "typecheck": "npm run -w ./sdk typecheck && npm run -w ./dashboard typecheck && npm run -w ./mcp typecheck && npm run -w ./cli typecheck",
+    "dev": "npm run -w ./cli dev",
+    "test": "npm run -w ./sdk test"
   },
   "engines": {
     "node": ">=20"

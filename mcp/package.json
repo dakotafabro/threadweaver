@@ -1,8 +1,13 @@
 {
-  "name": "@threadweaver/mcp",
-  "version": "0.1.1",
+  "name": "@dakotafabrodev/threadweaver-mcp",
+  "version": "0.1.2",
   "description": "ThreadWeaver MCP server for querying ingested conversational memory from ChatGPT exports",
-  "keywords": ["threadweaver", "mcp", "chatgpt-export", "goose"],
+  "keywords": [
+    "threadweaver",
+    "mcp",
+    "chatgpt-export",
+    "goose"
+  ],
   "type": "module",
   "exports": "./src/server.ts",
   "scripts": {
@@ -11,7 +16,7 @@
     "dev": "tsx src/server.ts"
   },
   "dependencies": {
-    "@threadweaver/sdk": "file:../sdk",
+    "@dakotafabrodev/threadweaver-sdk": "^0.1.2",
     "express": "^4.21.2"
   },
   "devDependencies": {

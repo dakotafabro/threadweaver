@@ -39,7 +39,7 @@ In progress:
 Run:
 
 npm install
-npm run -w @threadweaver/cli dev -- init
+npm run -w @threadweaver/threadweaver-cli dev -- init
 threadweaver connect chatgpt-export --file /absolute/path/to/export-or-conversations.json
 threadweaver projects sync-from-import
 threadweaver projects allow --project chatgpt-general --access summary

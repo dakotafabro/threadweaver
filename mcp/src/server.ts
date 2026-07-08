@@ -7,7 +7,7 @@ import {
   listRecentFromThreads,
   readPolicy,
   recallFromThreads
-} from "@threadweaver/sdk";
+} from "@dakotafabrodev/threadweaver-sdk";
 
 type ToolName =
   | "list_allowed_projects"
