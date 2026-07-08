@@ -1,6 +1,8 @@
 {
   "name": "@threadweaver/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "ThreadWeaver SDK for export-ingest normalization and policy-governed conversational memory",
+  "keywords": ["threadweaver", "sdk", "chatgpt-export", "memory"],
   "type": "module",
   "exports": "./src/index.ts",
   "scripts": {

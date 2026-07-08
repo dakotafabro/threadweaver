@@ -1,6 +1,8 @@
 {
   "name": "@threadweaver/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "ThreadWeaver CLI for ChatGPT export ingestion, policy-scoped recall, and local-first memory workflows",
+  "keywords": ["threadweaver", "chatgpt-export", "goose", "memory", "mcp"],
   "type": "module",
   "bin": {
     "threadweaver": "dist/index.js"

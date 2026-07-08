@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://threadweaver.dev/schemas/chatgpt-export/message-line.schema.json",
+  "title": "Threadweaver ChatGPT Message Line",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source", "conversation_id", "message_id", "role", "created_at", "content", "sequence"],
+  "properties": {
+    "source": { "const": "chatgpt" },
+    "conversation_id": { "type": "string", "minLength": 1 },
+    "message_id": { "type": "string", "minLength": 1 },
+    "role": { "enum": ["user", "assistant", "system", "tool"] },
+    "created_at": { "type": ["string", "null"], "format": "date-time" },
+    "content": { "type": "string" },
+    "sequence": { "type": "integer", "minimum": 1 },
+    "metadata": { "type": "object" }
+  }
+}

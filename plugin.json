@@ -1,7 +1,7 @@
 {
   "name": "threadweaver",
-  "version": "0.1.0",
-  "description": "Consent-first conversational memory plugin for Goose",
+  "version": "0.1.1",
+  "description": "Consent-first conversational memory plugin for Goose (ChatGPT export ingestion only; direct live sync in development)",
   "mcpServers": {
     "threadweaver": {
       "command": "node",

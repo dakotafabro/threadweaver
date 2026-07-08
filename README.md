@@ -1,6 +1,21 @@
 # ThreadWeaver
 
-Local-first, consent-first trust boundary for agent access to personal knowledge.
+Consent-first conversational memory for Goose workflows, currently powered by ChatGPT data export ingestion.
+
+## Current product boundary
+
+ThreadWeaver does not directly connect to or sync from a live ChatGPT account at this time.
+
+Current support:
+- Import ChatGPT export data
+- Normalize and scope conversations locally
+- Apply policy-gated retrieval
+- Surface recall in Goose via MCP tools
+
+In progress:
+- Export-bundle producer workflow for project and chat selection
+- Ingest contracts for deterministic archive and query
+- Future connector architecture for richer sync paths
 
 ## Packages
 
@@ -13,24 +28,33 @@ Local-first, consent-first trust boundary for agent access to personal knowledge
 ## Commands
 
 - threadweaver init
-- threadweaver expose configure
-- threadweaver expose list
-- threadweaver serve-mcp
+- threadweaver connect chatgpt-export --file /path/to/export
+- threadweaver projects sync-from-import
+- threadweaver projects allow --project chatgpt-general --access summary
+- threadweaver recent --project chatgpt-general --limit 10
+- threadweaver recall "query text" --project chatgpt-general --limit 5
 
 ## Quickstart
 
 Run:
-npm run -w @threadweaver/cli dev -- quickstart --file /absolute/path/to/conversations.json
 
-This initializes local policy storage, imports conversations, syncs projects, and allows one project for recall.
+npm install
+npm run -w @threadweaver/cli dev -- init
+threadweaver connect chatgpt-export --file /absolute/path/to/export-or-conversations.json
+threadweaver projects sync-from-import
+threadweaver projects allow --project chatgpt-general --access summary
+
+## Active project docs
+
+- docs/active-project-threadweaver.md
+- docs/specs/chatgpt-export-bundle-v0.2.md
 
 ## Stability notice
-- See docs/core-vs-personalization-boundary.md before modifying core trust and contract files.
+
+See docs/core-vs-personalization-boundary.md before modifying trust and contract files.
 
 ## Stability checks
 
 Run a core drift preflight before recall workflows:
 
 - threadweaver doctor
-
-This command checks files listed in docs/core-files-manifest.json and warns if core files were modified.

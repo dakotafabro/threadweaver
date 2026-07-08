@@ -1,0 +1,63 @@
+{
+  "spec_version": "0.1.0",
+  "export_id": "fixture-export-001",
+  "source": "chatgpt",
+  "exported_at": "2026-07-07T20:35:00Z",
+  "exporter": {
+    "name": "threadweaver-chatgpt-exporter",
+    "version": "0.1.0"
+  },
+  "selection": {
+    "mode": "mixed",
+    "project_ids": [
+      "pinned-architecture",
+      "pinned-frontend",
+      "pinned-product"
+    ],
+    "chat_ids": [
+      "conv_001",
+      "conv_002",
+      "conv_003"
+    ],
+    "time_range": {
+      "after": null,
+      "before": null
+    }
+  },
+  "counts": {
+    "projects": 3,
+    "conversations": 3,
+    "messages": 7
+  },
+  "files": [
+    {
+      "path": "index/conversations.jsonl",
+      "bytes": 627,
+      "sha256": "e232b068204752de86736a54949034a2e0adf0160de50412bd1567a1b020b6c9"
+    },
+    {
+      "path": "index/messages.jsonl",
+      "bytes": 1786,
+      "sha256": "d8e099b2e98d618b2f0d795d603e7c4a4ad48d50ad20399057b2aadbab20329b"
+    },
+    {
+      "path": "conversations/conv_001.md",
+      "bytes": 615,
+      "sha256": "4159b4f329f2935ba99b2b7975715de569982a532fa7d61e624ee027bd84e0c0"
+    },
+    {
+      "path": "conversations/conv_002.md",
+      "bytes": 603,
+      "sha256": "5a133acd70bfbe7eb281a8e5d55b41140b86db84dbfc39b0a4ab748a58db0e04"
+    },
+    {
+      "path": "conversations/conv_003.md",
+      "bytes": 690,
+      "sha256": "0e719b98ab25232c35da5c4c669a1b5f03ffff68ea7e1ce0e34316cd89757f75"
+    }
+  ],
+  "privacy": {
+    "contains_pii_possible": true,
+    "redactions_applied": false
+  }
+}

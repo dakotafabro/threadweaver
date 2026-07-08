@@ -18,3 +18,16 @@ ThreadWeaver supports OpenAI ChatGPT export input as either:
 - threadweaver projects list
 - threadweaver recent --project chatgpt-general --limit 10
 - threadweaver recall "query text" --project chatgpt-general --limit 5
+
+## Boundary
+ThreadWeaver currently operates on exported ChatGPT data and local ingestion.
+Direct live synchronization with a ChatGPT account is not available in the current release.
+
+## Boundary
+ThreadWeaver currently operates on exported ChatGPT data and local ingestion.
+Direct live synchronization with a ChatGPT account is not available in the current release.
+
+## Boundary
+
+ThreadWeaver currently operates on exported ChatGPT data and local ingestion.
+Direct live synchronization with a ChatGPT account is not available in the current release.
