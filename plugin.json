@@ -1,0 +1,11 @@
+{
+  "name": "threadweaver",
+  "version": "0.1.0",
+  "description": "Consent-first conversational memory plugin for Goose",
+  "mcpServers": {
+    "threadweaver": {
+      "command": "node",
+      "args": ["${PLUGIN_ROOT}/goose-plugin-mcp.js"]
+    }
+  }
+}
