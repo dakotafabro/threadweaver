@@ -1,0 +1,20 @@
+{
+  "name": "threadweaver",
+  "version": "0.1.0",
+  "type": "extension",
+  "description": "Consent-first conversational memory for agent workflows - import, normalize, and recall past conversations",
+  "entry": "mcp/index.js",
+  "scope": "global",
+  "token_cost": 0,
+  "keywords": ["memory", "conversation", "recall", "consent", "history", "context"],
+  "author": {
+    "name": "Dakota Fabro",
+    "github": "dakotafabro"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/dakotafabro/threadweaver",
+  "agents": ["goose"],
+  "dependencies": [],
+  "conflicts": [],
+  "peers": ["spore"]
+}
