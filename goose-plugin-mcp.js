@@ -427,9 +427,7 @@ async function runTool(name, args) {
 }
 
 function writeMessage(message) {
-  const body = JSON.stringify(message);
-  const header = "Content-Length: " + Buffer.byteLength(body, "utf8") + "\r\n\r\n";
-  process.stdout.write(header + body);
+  process.stdout.write(JSON.stringify(message) + "\n");
 }
 
 function sendResult(id, result) {
@@ -554,27 +552,15 @@ async function handleRequest(message) {
 }
 
 function processBuffer() {
-  while (true) {
-    const headerEnd = buffer.indexOf("\r\n\r\n");
-    if (headerEnd === -1) return;
-
-    const header = buffer.slice(0, headerEnd);
-    const match = header.match(/Content-Length:\s*(\d+)/i);
-    if (!match) {
-      buffer = "";
-      return;
-    }
-
-    const length = Number(match[1]);
-    const total = headerEnd + 4 + length;
-    if (buffer.length < total) return;
-
-    const body = buffer.slice(headerEnd + 4, total);
-    buffer = buffer.slice(total);
+  let newline;
+  while ((newline = buffer.indexOf("\n")) !== -1) {
+    const line = buffer.slice(0, newline).trim();
+    buffer = buffer.slice(newline + 1);
+    if (!line) continue;
 
     let message;
     try {
-      message = JSON.parse(body);
+      message = JSON.parse(line);
     } catch {
       continue;
     }
