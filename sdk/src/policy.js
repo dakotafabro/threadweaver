@@ -5,11 +5,10 @@ export const threadweaverDir = join(homedir(), ".threadweaver");
 export const policyPath = join(threadweaverDir, "policy.json");
 export const auditPath = join(threadweaverDir, "audit.log");
 export const defaultProjects = [
-    { id: "aaif-ambassador", name: "AAIF Ambassador", access: "deny" },
-    { id: "eleventh-house-studios", name: "Eleventh House Studios", access: "deny" },
     { id: "career", name: "Career", access: "deny" },
     { id: "personal", name: "Personal", access: "deny" },
-    { id: "health", name: "Health", access: "deny" }
+    { id: "health", name: "Health", access: "deny" },
+    { id: "finance", name: "Finance", access: "deny" }
 ];
 export const defaultPolicy = {
     defaultAccess: "deny",

@@ -9,11 +9,10 @@ const auditPath = join(threadweaverDir, "audit.log");
 const threadsPath = join(threadweaverDir, "chatgpt_threads.json");
 
 const defaultProjects = [
-  { id: "aaif-ambassador", name: "AAIF Ambassador", access: "deny" },
-  { id: "eleventh-house-studios", name: "Eleventh House Studios", access: "deny" },
   { id: "career", name: "Career", access: "deny" },
   { id: "personal", name: "Personal", access: "deny" },
-  { id: "health", name: "Health", access: "deny" }
+  { id: "health", name: "Health", access: "deny" },
+  { id: "finance", name: "Finance", access: "deny" }
 ];
 
 const defaultPolicy = {

@@ -61,7 +61,17 @@ function inferQuery(utterance, reasons) {
         reasons.push("query-normalized");
     return query || src;
 }
-function inferProjectHint(utterance, reasons) {
+const genericProjectNames = ["chatgpt general", "chatgpt-general"];
+function knownProjectNames(knownProjects) {
+    const names = [];
+    for (const name of [...knownProjects, ...genericProjectNames]) {
+        const low = normalizeWhitespace(String(name ?? "")).toLowerCase();
+        if (low && !names.includes(low))
+            names.push(low);
+    }
+    return names;
+}
+function inferProjectHint(utterance, reasons, knownProjects) {
     const src = normalizeWhitespace(utterance);
     const srcLow = src.toLowerCase();
     const marker = "project ";
@@ -76,7 +86,7 @@ function inferProjectHint(utterance, reasons) {
             return hint;
         }
     }
-    const known = ["aaif ambassador", "bitcoin", "eleventh house studios", "chatgpt general", "chatgpt-general"];
+    const known = knownProjectNames(knownProjects);
     const lowAll = srcLow;
     for (const k of known) {
         if (lowAll.includes(k)) {
@@ -105,11 +115,11 @@ function inferBuildTopic(utterance, reasons) {
     }
     return undefined;
 }
-export function inferRecallIntent(utterance) {
+export function inferRecallIntent(utterance, knownProjects = []) {
     const reasons = [];
     const mode = inferMode(utterance, reasons);
     const query = inferQuery(utterance, reasons);
-    const projectHint = inferProjectHint(utterance, reasons);
+    const projectHint = inferProjectHint(utterance, reasons, knownProjects);
     const buildTopic = inferBuildTopic(utterance, reasons);
     let confidence = 0.55;
     if (query.length > 0)
