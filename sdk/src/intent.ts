@@ -78,7 +78,18 @@ function inferQuery(utterance: string, reasons: string[]) {
   return query || src;
 }
 
-function inferProjectHint(utterance: string, reasons: string[]) {
+const genericProjectNames = ["chatgpt general", "chatgpt-general"];
+
+function knownProjectNames(knownProjects: string[]) {
+  const names: string[] = [];
+  for (const name of [...knownProjects, ...genericProjectNames]) {
+    const low = normalizeWhitespace(String(name ?? "")).toLowerCase();
+    if (low && !names.includes(low)) names.push(low);
+  }
+  return names;
+}
+
+function inferProjectHint(utterance: string, reasons: string[], knownProjects: string[]) {
   const src = normalizeWhitespace(utterance);
   const srcLow = src.toLowerCase();
 
@@ -95,7 +106,7 @@ function inferProjectHint(utterance: string, reasons: string[]) {
     }
   }
 
-  const known = ["aaif ambassador", "bitcoin", "eleventh house studios", "chatgpt general", "chatgpt-general"];
+  const known = knownProjectNames(knownProjects);
   const lowAll = srcLow;
   for (const k of known) {
     if (lowAll.includes(k)) {
@@ -129,11 +140,11 @@ function inferBuildTopic(utterance: string, reasons: string[]) {
   return undefined;
 }
 
-export function inferRecallIntent(utterance: string): RecallIntent {
+export function inferRecallIntent(utterance: string, knownProjects: string[] = []): RecallIntent {
   const reasons: string[] = [];
   const mode = inferMode(utterance, reasons);
   const query = inferQuery(utterance, reasons);
-  const projectHint = inferProjectHint(utterance, reasons);
+  const projectHint = inferProjectHint(utterance, reasons, knownProjects);
   const buildTopic = inferBuildTopic(utterance, reasons);
 
   let confidence = 0.55;

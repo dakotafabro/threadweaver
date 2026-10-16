@@ -218,7 +218,9 @@ async function inferAndRecall(args: Record<string, unknown>) {
   const buildContext = asString(args.buildContext, "buildContext") ?? "";
   const explicitLimit = asLimit(args.limit);
 
-  const inferred = inferRecallIntent(utterance);
+  const policy = await readPolicy();
+  const knownProjects = policy.projects.filter((p) => p.access !== "deny").flatMap((p) => [p.name, p.id]);
+  const inferred = inferRecallIntent(utterance, knownProjects);
   let scope: ScopeResolution;
   try {
     scope = await resolveScope(explicitProject || inferred.projectHint);

@@ -1,7 +1,7 @@
 # ThreadWeaver MCP Conversational Demo
 
 ## Example utterance
-I remember thinking within chatgpt about Bitcoin and show overlap with build about consent dashboard project chatgpt general
+I remember thinking within chatgpt about Sourdough and show overlap with build about consent dashboard project chatgpt general
 
 ## Endpoint and tool
 - Endpoint: POST /mcp/call
@@ -13,8 +13,8 @@ I remember thinking within chatgpt about Bitcoin and show overlap with build abo
   "name": "infer_and_recall",
   "inferred": {
     "mode": "recall",
-    "query": "I remember thinking within chatgpt about Bitcoin and show overlap with build about consent dashboard project chatgpt general",
-    "projectHint": "bitcoin",
+    "query": "I remember thinking within chatgpt about Sourdough and show overlap with build about consent dashboard project chatgpt general",
+    "projectHint": "chatgpt general",
     "confidence": 0.9500000000000001,
     "reasons": [
       "mode-default-recall",
@@ -23,7 +23,7 @@ I remember thinking within chatgpt about Bitcoin and show overlap with build abo
   },
   "scope": {
     "searchedProjects": [
-      "aaif-ambassador",
+      "product-roadmap",
       "chatgpt-general"
     ],
     "confidence": 0.7,
@@ -43,8 +43,8 @@ I remember thinking within chatgpt about Bitcoin and show overlap with build abo
   "name": "infer_and_recall",
   "inferred": {
     "mode": "recall",
-    "query": "I remember thinking within chatgpt about Bitcoin and show overlap with build about consent dashboard project chatgpt general",
-    "projectHint": "bitcoin",
+    "query": "I remember thinking within chatgpt about Sourdough and show overlap with build about consent dashboard project chatgpt general",
+    "projectHint": "chatgpt general",
     "confidence": 0.9500000000000001,
     "reasons": [
       "mode-default-recall",
@@ -53,7 +53,7 @@ I remember thinking within chatgpt about Bitcoin and show overlap with build abo
   },
   "scope": {
     "searchedProjects": [
-      "aaif-ambassador",
+      "product-roadmap",
       "chatgpt-general"
     ],
     "confidence": 0.7,
@@ -67,7 +67,7 @@ I remember thinking within chatgpt about Bitcoin and show overlap with build abo
   "error": null
 }
 
-## Recent query demo (AAIF, project hint normalization)
+## Recent query demo (project hint normalization)
 {
   "ok": true,
   "name": "recent_chatgpt",
@@ -85,7 +85,7 @@ I remember thinking within chatgpt about Bitcoin and show overlap with build abo
   "row_count": 5,
   "sample_recent_titles": [
     "Goose Interactive Shell Input",
-    "AAIF Reading List",
+    "Reading List",
     "Goose Integration with ChatGPT",
     "AGI and Human Infrastructure",
     "React Problem Space"
